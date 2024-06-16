@@ -11,7 +11,7 @@ app.get('/hit-link', async (req, res) => {
         res.send('Link hit successful');
     } catch (error) {
         console.error('Error hitting link:', error);
-        res.status(500).send('Error hitting link');
+        res.status(500).send('Error hitting link meghani');
     }
 });
 // Schedule the cron job
@@ -19,7 +19,7 @@ app.get('/hit-link', async (req, res) => {
 cron.schedule('* * * * *', async () => {
     try {
         console.log('Cron job running...');     
-        await axios.get('https://cron-fyy4.onrender.com/hit-link'); // Change the URL if your server runs on a different port
+        await axios.get('https://corsapi.onrender.com/hit-link'); // Change the URL if your server runs on a different port
     } catch (error) {
         console.error('Error in cron job:', error);
     }
