@@ -7,7 +7,10 @@ app.get('/hit-link', async (req, res) => {
     // Hit your link here
     try {
         const response = await axios.get('https://zaverchand-meghani-api-zzvq.onrender.com/');
-        console.log('Link hit successful:', response.data);
+        const response2 = await axios.get('https://mynewapi-zpqt.onrender.com/');
+
+        console.log('Link hit successful response:', response.data);
+        console.log('Link hit successful response2:', response2.data);
         res.send('Link hit successful');
     } catch (error) {
         console.error('Error hitting link:', error);
