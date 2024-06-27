@@ -19,7 +19,7 @@ app.get('/hit-link', async (req, res) => {
 });
 // Schedule the cron job
 // Schedule the cron job
-cron.schedule('* * * * *', async () => {
+cron.schedule('*/5  * * * *', async () => {
     try {
         console.log('Cron job running...');     
         await axios.get('https://corsapi-0xbh.onrender.com/hit-link'); // Change the URL if your server runs on a different port
